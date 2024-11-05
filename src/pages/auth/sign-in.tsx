@@ -1,18 +1,24 @@
-import { Label } from "@radix-ui/react-label";
-import { Helmet } from "react-helmet-async";
-import { useForm } from "react-hook-form";
-import { z } from 'zod';
-import { Button } from "../../components/ui/button";
-import { Input } from "../../components/ui/input";
+import { Label } from '@radix-ui/react-label'
+import { Helmet } from 'react-helmet-async'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
 
+import { Button } from '../../components/ui/button'
+import { Input } from '../../components/ui/input'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const signInForm = z.object({
-  email: z.string().email()
+  email: z.string().email(),
 })
 
 type SignInForm = z.infer<typeof signInForm>
 
 export function SignIn() {
-  const { register, handleSubmit, formState: {isSubmitting} } = useForm<SignInForm>();
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm<SignInForm>()
 
   function handleSignIn(data: SignInForm) {
     console.log(data)
@@ -34,15 +40,15 @@ export function SignIn() {
           <form className="space-y-4" onSubmit={handleSubmit(handleSignIn)}>
             <div className="space-y-2">
               <Label htmlFor="email">Seu e-mail</Label>
-              <Input 
-                id="email" 
-                type="email" 
-                {...register("email")} 
+              <Input
+                id="email"
+                type="email"
+                {...register('email')}
               />
             </div>
-            <Button 
-              className="w-full" 
-              type="submit" 
+            <Button
+              className="w-full"
+              type="submit"
               disabled={isSubmitting}
             >
               Acessar painel
@@ -51,5 +57,5 @@ export function SignIn() {
         </div>
       </div>
     </>
-  );
+  )
 }
