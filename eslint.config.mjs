@@ -9,12 +9,14 @@ export default [
     "component": true,
     "html": false
     }],
-    // '@stylistic/js/max-len': ['error', { 
-    //   "code": 80,
-    //   "ignoreComments": true, 
-    //   "ignoreStrings": true,
-    //   "ignoreUrls": true 
-    // }],
+    '@stylistic/js/max-len': 
+    ['warn', { 
+      code: 80,
+      tabWidth: 2,
+      ignoreComments: true, 
+      ignoreStrings: true,
+      ignoreUrls: true 
+    }],
   }
 }
 ]
