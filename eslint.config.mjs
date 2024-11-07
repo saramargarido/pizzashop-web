@@ -39,6 +39,10 @@ export default [
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/multiline-ternary': ['error', 'always'],
       'react/jsx-handler-names': 'off',
+      'react/self-closing-comp': ['error', {
+        component: false,
+        html: false,
+      }],
     },
     languageOptions: {
       globals: {
