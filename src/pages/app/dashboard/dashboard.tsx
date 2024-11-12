@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 import { DayOrdersAmountCard } from './day-orders-amount-card'
-import { MounthCanceledOrdersAmountCard } from './month-canceled-orders-amount-card copy'
+import { MounthCanceledOrdersAmountCard } from './month-canceled-orders-amount-card'
 import { MounthOrdersAmountCard } from './month-orders-amount-card'
 import { MounthRevenueCard } from './month-revenue-card'
 import { PopularProductsChart } from './popular-products-chart'
