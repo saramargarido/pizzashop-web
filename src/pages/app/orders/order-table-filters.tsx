@@ -22,7 +22,12 @@ export function OrderTableFilters() {
   const customerName = searchParams.get('customerName')
   const status = searchParams.get('status')
 
-  const { register, handleSubmit, control, reset } = useForm<OrderFilterSchema>({
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+  } = useForm<OrderFilterSchema>({
     resolver: zodResolver(orderFilterSchema),
     defaultValues: {
       orderId: orderId ?? '',
@@ -100,11 +105,11 @@ export function OrderTableFilters() {
               value={value}
               disabled={disabled}
             >
-              <SelectTrigger className="h-8 w-[100px]">
+              <SelectTrigger className="h-8 w-[200px]">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">Todos</SelectItem>
+                <SelectItem value="all">Todos status</SelectItem>
                 <SelectItem value="pending">Pendente</SelectItem>
                 <SelectItem value="canceled">Cancelado</SelectItem>
                 <SelectItem value="processing">Em preparo</SelectItem>
