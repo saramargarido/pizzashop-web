@@ -1,7 +1,6 @@
-import { defineConfig, mergeConfig } from 'vitest/config'
-import viteConfig from './vite.config.ts'
+import { defineConfig } from 'vitest/config'
 
-export default mergeConfig(viteConfig, defineConfig({
+export default (defineConfig({
   test: {
     globals: true,
     setupFiles: ['./test/setup.ts'],

@@ -1,5 +1,12 @@
-import { expect, test } from 'vitest'
+import { render } from '@testing-library/react'
 
-test('1 + 1 equals 2', () => {
-  expect(1 + 1).toEqual(2)
+import { OrderStatus } from './order-status'
+
+// eslint-disable-next-line no-undef
+describe('Order Status', () => {
+  it('should display the right text based on order status', () => {
+    const wrapper = render(<OrderStatus status="pending" />)
+    const statusText = wrapper.getByText('Pendente')
+    expect(statusText).toBeInTheDocument()
+  })
 })
