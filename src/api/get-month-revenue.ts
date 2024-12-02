@@ -7,6 +7,6 @@ export interface GetMonthRevenueResponse {
 
 export async function getMonthRevenue() {
   const response = await api.get<GetMonthRevenueResponse>('/metrics/month-receipt')
-
+console.log(response.data)
   return response.data
 }
